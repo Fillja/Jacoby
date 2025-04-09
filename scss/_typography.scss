@@ -1,0 +1,47 @@
+@font-face{
+    font-family: 'Outfit';
+    src: url('/fonts/Outfit-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+html, body{
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    font-family: 'Outfit', sans-serif;
+
+    h1,h2,h3,h4,h5,h6{
+        font-weight: 700;
+    }
+
+    h1{
+        font-size: 50px;
+        line-height: 3.5rem;
+    }
+    
+    h2{
+        font-size: 50px;
+        line-height: 3rem;
+    }
+    
+    h3{
+        font-size: 40px;
+        line-height: 2.5rem;
+    }
+    
+    h4{
+        font-size: 30px;
+    }
+    
+    h5{
+        font-size: 20px;
+    }
+    
+    h6{
+        font-size: 18px;
+    }
+}

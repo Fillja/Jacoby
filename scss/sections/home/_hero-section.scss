@@ -1,0 +1,33 @@
+.home-hero-section{
+    background-image: url('/images/hero-image.png');
+    background-size: cover; 
+    background-position: center;  
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 60vh; 
+
+    @include mobile{
+        min-height: 100vh; 
+    }
+
+    .container{
+
+        .hero-content{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-top: 14rem;
+
+            .hero-text{
+                opacity: 0.8;
+                word-spacing: .5rem;
+            }
+
+            .social-media{
+                display: inline-flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    }
+}
