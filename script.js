@@ -5,6 +5,7 @@ window.onpageshow = function(event) {
     }
 };
 
+
 // BURGER MENU
 const burgerButton = document.getElementById('burger-button');
 const closeButton = document.getElementById('close-button');
@@ -33,28 +34,52 @@ burgerButton.addEventListener('click', handleClick);
 closeButton.addEventListener('click', handleClick);
 
 
-//TV CAROUSEL
+// SCROLL REVEAL
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                revealElements(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach((section) => {
+        sectionObserver.observe(section);
+    });
+
+    function revealElements(section) {
+        const reveals = section.querySelectorAll(".reveal");
+
+        reveals.forEach((reveal, index) => {
+            setTimeout(() => {
+                reveal.classList.add("active");
+            }, index * 600);
+        });
+    }
+});
+
+
+// TV CAROUSEL
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll('.carousel-image');
     let currentIndex = 0;
 
     function showImage(index) {
-        // Remove active class from all images
         images.forEach(image => image.classList.remove('active'));
 
-        // Add active class to the current image
         images[index].classList.add('active');
     }
 
-    // Initial image display
     showImage(currentIndex);
 
-    // Function to cycle through images
     function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+        currentIndex = (currentIndex + 1) % images.length;
         showImage(currentIndex);
     }
 
-    // Set interval to change the image every 3 seconds
-    setInterval(nextImage, 3000); // Change image every 3000ms (3 seconds)
+    setInterval(nextImage, 3000); 
 });
