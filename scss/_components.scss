@@ -49,9 +49,14 @@
     }
 }
 
+// SECTION HEADING
+.section-heading{
+    margin-bottom: 4rem;
+}
+
 // SVG STYLING
 .svg-icon{
-    transition: color .25s ease-in-out;
+    transition: all 0.25s ease-in-out;
     display: inline-block;
     vertical-align: middle;
 }

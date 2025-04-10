@@ -65,9 +65,10 @@
     transition: all 0.25s ease-in-out;
     text-decoration: none;
 
-    i{
-        font-size: 1rem;
-        margin-left: .5rem;
+    .svg-icon{
+        position: relative;
+        top: -2px;
+        margin-left: 1rem;
     }
 }
 
@@ -80,6 +81,10 @@
         background-color: var(--color-coal);
         border-color: var(--color-coal);
         color: var(--color-orange);
+
+        .svg-icon{
+            @include svg-orange;
+        }
     }
 }
 

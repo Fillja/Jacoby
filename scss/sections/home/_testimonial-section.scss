@@ -1,0 +1,35 @@
+.home-testimonial-section{
+    background-image: url("/images/feedback-image.png");
+
+    .container{
+
+        .testimonial-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            @include tablet{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .testimonial-box{
+                background-color: rgba(255, 157, 0, 0.7);
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                @include tablet{
+                    max-width: 22rem;
+                }
+
+                p{
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}

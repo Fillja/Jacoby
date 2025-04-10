@@ -19,6 +19,33 @@
     color: var(--color-orange);
 }
 
+//SVG COLORS
+@mixin svg-dark{
+    filter: invert(0%) sepia(7%) saturate(2656%) hue-rotate(14deg) brightness(96%) contrast(93%);
+}
+
+@mixin svg-light{
+    filter: invert(98%) sepia(5%) saturate(847%) hue-rotate(227deg) brightness(116%) contrast(95%);
+}
+
+@mixin svg-orange{
+    filter: invert(67%) sepia(16%) saturate(6128%) hue-rotate(0deg) brightness(105%) contrast(104%);
+}
+
+
+.svg-light{
+    @include svg-light;
+}
+
+.svg-dark{
+    @include svg-dark;
+}
+
+.svg-orange{
+    @include svg-orange;
+}
+
+
 //BACKGROUND COLORS
 .bg-light{
     background-color: var(--color-light);

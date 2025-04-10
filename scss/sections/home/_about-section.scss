@@ -2,7 +2,12 @@
 
     .container{
         display: flex;
+        flex-direction: column;
         gap: 3rem;
+
+        @include tablet{
+            flex-direction: row;
+        }
 
         .about-content{
             display: flex;
@@ -18,7 +23,11 @@
         }
 
         .image-wrapper{
-            flex: 1 1 45%
+            flex: 1 1 45%;
+
+            .image{
+                box-shadow: 8px 8px var(--color-orange);
+            }
         }
     }
 }
