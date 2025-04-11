@@ -396,7 +396,7 @@ footer .container {
 }
 
 .home-hero-section {
-  background-image: url("/images/hero-image.png");
+  background-image: url("./images/hero-image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -504,7 +504,7 @@ footer .container {
 }
 
 .home-testimonial-section {
-  background-image: url("/images/feedback-image.png");
+  background-image: url("./images/feedback-image.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
