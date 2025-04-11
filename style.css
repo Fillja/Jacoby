@@ -540,13 +540,8 @@ footer .container {
 .home-media-section .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto auto;
   gap: 3rem;
-}
-@media (min-width: 768px) {
-  .home-media-section .container {
-    grid-template-rows: 1fr 1fr;
-  }
 }
 @media (min-width: 1400px) {
   .home-media-section .container {
@@ -554,59 +549,33 @@ footer .container {
     grid-template-rows: 1fr;
   }
 }
-.home-media-section .container .television-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.home-media-section .container .television-container .tv-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 0 1px 10px var(--color-orange);
-  z-index: 0;
-}
-@media (min-width: 1400px) {
-  .home-media-section .container .television-container .tv-frame {
-    top: 5.2rem;
-  }
-}
 .home-media-section .container .television-container .carousel-container {
   position: relative;
   width: 100%;
-  height: 100%;
-  display: flex;
+  aspect-ratio: 16/9;
   overflow: hidden;
-  justify-content: center;
-  z-index: 1;
-}
-.home-media-section .container .television-container .carousel-container .carousel-image {
-  width: 96%;
-  height: 78%;
-  top: 1rem;
-  left: 1rem;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  position: absolute;
-}
-.home-media-section .container .television-container .carousel-container .carousel-image.active {
-  opacity: 1 !important;
-}
-@media (min-width: 996px) {
-  .home-media-section .container .television-container .carousel-container .carousel-image {
-    width: 89%;
-    height: 100%;
-    top: 1rem;
-    left: 1.2rem;
-  }
+  box-shadow: 0px 2px 16px var(--color-orange);
 }
 @media (min-width: 1400px) {
-  .home-media-section .container .television-container .carousel-container .carousel-image {
-    top: 6rem;
-    left: 0.8rem;
-    width: 96%;
-    height: 58%;
+  .home-media-section .container .television-container .carousel-container {
+    top: 7rem;
   }
+}
+.home-media-section .container .television-container .carousel-container .carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+.home-media-section .container .television-container .carousel-container .carousel-image.active {
+  opacity: 1;
+  z-index: 1;
 }
 .home-media-section .container .literature-container p {
   margin-bottom: 2rem;
