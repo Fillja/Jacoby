@@ -46,7 +46,7 @@ html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3,
   letter-spacing: 0.3rem;
 }
 html h1, body h1 {
-  font-size: 40px;
+  font-size: 28px;
   line-height: 3.5rem;
   font-weight: 700;
 }
@@ -382,12 +382,12 @@ header .container .mobile-menu #close-button {
 header .container .mobile-menu .mobile-navigation {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
 }
 header .container .mobile-menu .mobile-navigation .link {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 footer {
