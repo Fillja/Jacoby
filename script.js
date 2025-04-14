@@ -10,6 +10,7 @@ window.onpageshow = function(event) {
 const burgerButton = document.getElementById('burger-button');
 const closeButton = document.getElementById('close-button');
 const burgerMenu = document.getElementById('burger-menu');
+const mobileLinks = document.querySelectorAll('.mobile-navigation .link');
 
 const handleClick = () => {
     if(burgerMenu.classList.contains('hidden')){
@@ -32,6 +33,9 @@ const handleClick = () => {
 
 burgerButton.addEventListener('click', handleClick);
 closeButton.addEventListener('click', handleClick);
+mobileLinks.forEach(link => {
+    link.addEventListener('click', handleClick);
+});
 
 
 // SCROLL REVEAL
