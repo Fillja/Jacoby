@@ -18,6 +18,21 @@
             gap: 2rem;
             padding-top: 14rem;
 
+            #hero-heading{
+
+                &::after{
+                    content: '|';
+                    animation: blink 1s infinite;
+                    margin-left: 4px;
+                    color: orange;
+                }
+
+                @keyframes blink {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0; }
+                }
+            }
+            
             .hero-text{
                 opacity: 0.8;
                 word-spacing: .5rem;

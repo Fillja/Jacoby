@@ -83,3 +83,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(nextImage, 3000); 
 });
+
+// HERO HEADING TEXT CYCLE 
+
+document.addEventListener("DOMContentLoaded", () =>{
+    const heroHeading = document.getElementById('hero-heading');
+    const heroWord = ['HACKER', 'RESEARCHER', 'SPEAKER', 'AUTHOR' , 'ADVISOR', 'NERD', 'PASSIONATE'];
+    let i = 0;
+    let isDeleting = false;
+    let typedText = '';
+
+    const type = () =>{
+        const currentWord = heroWord[i];
+
+        if(isDeleting){
+            typedText = currentWord.substring(0, typedText.length - 1);
+        }
+        else{
+            typedText = currentWord.substring(0, typedText.length + 1);
+        }
+
+        heroHeading.innerHTML = typedText;
+
+        if(!isDeleting && typedText === currentWord){
+            setTimeout(() => {
+                isDeleting = true;
+                type();
+            }, 1500);
+            return;
+        }
+
+        if(isDeleting && typedText === ''){
+            isDeleting = false;
+            i = (i + 1) % heroWord.length;
+        }
+
+        setTimeout(type, isDeleting ? 50 : 100);
+    }
+
+    type();
+});

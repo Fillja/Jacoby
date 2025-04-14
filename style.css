@@ -46,12 +46,17 @@ html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3,
   letter-spacing: 0.3rem;
 }
 html h1, body h1 {
-  font-size: 50px;
+  font-size: 40px;
   line-height: 3.5rem;
   font-weight: 700;
 }
+@media (min-width: 768px) {
+  html h1, body h1 {
+    font-size: 50px;
+  }
+}
 html h2, body h2 {
-  font-size: 50px;
+  font-size: 40px;
   line-height: 3.5rem;
   letter-spacing: 0.5rem;
 }
@@ -328,7 +333,8 @@ html h6, body h6 {
 }
 
 header {
-  position: absolute;
+  position: fixed;
+  z-index: 50;
   top: 0;
   width: 100%;
   padding: 1rem 0;
@@ -413,6 +419,20 @@ footer .container {
   flex-direction: column;
   gap: 2rem;
   padding-top: 14rem;
+}
+.home-hero-section .container .hero-content #hero-heading::after {
+  content: "|";
+  animation: blink 1s infinite;
+  margin-left: 4px;
+  color: orange;
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 .home-hero-section .container .hero-content .hero-text {
   opacity: 0.8;
