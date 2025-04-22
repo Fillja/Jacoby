@@ -127,7 +127,7 @@ html h6, body h6 {
 }
 
 .bg-dark-opacity {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   color: var(--color-light);
 }
 .bg-dark-opacity .link, .bg-dark-opacity .mobile-link {
@@ -334,11 +334,12 @@ html h6, body h6 {
 
 header {
   position: fixed;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
   z-index: 50;
   top: 0;
   width: 100%;
   padding: 1rem 0;
-  background-color: rgba(0, 0, 0, 0.6);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -439,6 +440,9 @@ footer .container {
   word-spacing: 0.5rem;
 }
 
+.home-about-section {
+  padding: 8rem 0;
+}
 .home-about-section .container {
   display: flex;
   flex-direction: column;
@@ -447,13 +451,14 @@ footer .container {
 @media (min-width: 996px) {
   .home-about-section .container {
     flex-direction: row;
+    gap: 10rem;
   }
 }
 .home-about-section .container .about-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  flex: 1 1 55%;
+  flex: 1 1 60%;
 }
 .home-about-section .container .about-content .about-text {
   display: flex;
@@ -461,7 +466,8 @@ footer .container {
   gap: 1rem;
 }
 .home-about-section .container .image-wrapper {
-  flex: 1 1 45%;
+  flex: 1 1 40%;
+  align-content: center;
 }
 .home-about-section .container .image-wrapper .image {
   box-shadow: 8px 8px var(--color-orange);
@@ -547,6 +553,8 @@ footer .container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
 @media (min-width: 996px) {
   .home-testimonial-section .container .testimonial-container .testimonial-box {

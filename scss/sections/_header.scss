@@ -1,10 +1,10 @@
 header{
     position: fixed;
+    backdrop-filter: blur(6px);
     z-index: 50;
     top: 0;
     width: 100%;
     padding: 1rem 0;
-    background-color: rgba(0, 0, 0, 0.6);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
