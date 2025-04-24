@@ -786,3 +786,37 @@ footer .container {
 .about-involvements-section .container .involvements-images .images-container:last-child .image {
   flex: 0 0 calc(33.333% - 0.67rem);
 }
+
+@media (min-width: 996px) {
+  .services-service-section .container .section-heading {
+    max-width: 55%;
+  }
+}
+.services-service-section .container .section-heading h2 {
+  margin-bottom: 1rem;
+}
+.services-service-section .container .services-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem 8rem;
+}
+@media (min-width: 996px) {
+  .services-service-section .container .services-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.services-service-section .container .services-wrapper .service-box {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+@media (min-width: 1400px) {
+  .services-service-section .container .services-wrapper .service-box {
+    width: 110%;
+  }
+}
+.services-service-section .container .services-wrapper .service-box .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+}

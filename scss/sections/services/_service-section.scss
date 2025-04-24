@@ -1,0 +1,43 @@
+.services-service-section{
+
+    .container{
+
+        .section-heading{
+
+            @include tablet{
+                max-width: 55%;
+            }
+
+            h2{
+                margin-bottom: 1rem;
+            }
+        }
+
+        .services-wrapper{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem 8rem;
+
+            @include tablet{
+               grid-template-columns: 1fr 1fr;
+            }
+
+
+            .service-box{
+                display: grid;
+                grid-template-rows: auto 1fr 1fr auto;
+                gap: 2rem;
+                padding: 2rem;
+
+                @include desktop{
+                    width: 110%;
+                }
+
+
+                .btn{
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
