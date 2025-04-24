@@ -26,8 +26,6 @@
             .service-box{
                 display: grid;
                 grid-template-rows: auto 1fr 1fr auto;
-                gap: 2rem;
-                padding: 2rem;
 
                 @include desktop{
                     width: 110%;

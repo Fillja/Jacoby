@@ -808,8 +808,6 @@ footer .container {
 .services-service-section .container .services-wrapper .service-box {
   display: grid;
   grid-template-rows: auto 1fr 1fr auto;
-  gap: 2rem;
-  padding: 2rem;
 }
 @media (min-width: 1400px) {
   .services-service-section .container .services-wrapper .service-box {
