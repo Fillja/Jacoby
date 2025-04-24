@@ -6,14 +6,18 @@
 @import './scss/buttons';
 @import './scss/components';
 
-//SECTION IMPORTS
-@import './scss/sections/header';
-@import './scss/sections/footer';
+//GENERIC SECTIONS IMPORTS
+@import './scss/sections/generic/header';
+@import './scss/sections/generic/footer';
+@import './scss/sections/generic/about-section';
 
-//HOME IMPORTS
+//HOME SECTIONS IMPORTS
 @import './scss/sections/home/hero-section';
-@import './scss/sections/home/about-section';
 @import './scss/sections/home/services-section';
 @import './scss/sections/home/testimonial-section';
 @import './scss/sections/home/media-section';
 @import './scss/sections/home/contact-section';
+
+//ABOUT SECTIONS IMPORTS
+@import './scss/sections/about/media-section';
+@import './scss/sections/about/involvements-section';

@@ -24,5 +24,9 @@ section{
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
+
+    img{
+        width: 100%;
+    }
 }
 
